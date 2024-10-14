@@ -1,5 +1,5 @@
 import "./App.css";
-import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast.jsx";
 
 const weatherForecasts = [
   {
@@ -44,8 +44,8 @@ const App = () => {
     <>
       <h1>Local Weather</h1>
       <section>
-        {weatherForecasts.map((forecast) => (
-          <WeatherForecast key={forecast.day} {...forecast} />
+        {weatherForecasts.map((forecast, index) => (
+          <WeatherForecast key={index} {...forecast} />
         ))}
       </section>
     </>
